@@ -9,8 +9,8 @@ def calculation_mode_2(num):
     right = 0
     while num > 0:
         # determine the inquiry tips
-        num_1 = random.randint()
-        num_2 = random.randint(1)   # for the division case
+        num_1 = random.randint(0,999)
+        num_2 = random.randint(1,999)   # for the division case
         num_1_str = str(num_1)
         num_2_str = str(num_2)
         op = ["+", "-", "*", "/"]
@@ -24,7 +24,7 @@ def calculation_mode_2(num):
 
         # determine the answer condition
         if user_input == str(result1) and rand_op == "+":  # add case
-            print(" Good job !")
+            print("Good job!")
             right += 1  # right answer number plus 1
             count += 1  # total number plus 1
 
@@ -51,5 +51,5 @@ def calculation_mode_2(num):
 
     score = (right / count)*100
 
-    print("Your  score  is:")
-    print(score)
+    print("Your score is:")
+    print(round(score),2)
